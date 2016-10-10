@@ -24,7 +24,6 @@ public class BarrilController : MonoBehaviour {
             speed = new Vector3((float)0.1, 0, 0);
             transform.Translate(speed);
             direita = true;
-            Debug.Log("Aqui");
         }
         else {
             speed = new Vector3((float)-0.1, 0, 0);
@@ -34,5 +33,9 @@ public class BarrilController : MonoBehaviour {
         if (col.gameObject.tag == "colliderFim") {
             Destroy(gameObject);
         }
+		if(col.gameObject.tag == "jogador" ){
+			Debug.Log ("Game Over");
+			Time.timeScale = 0;
+		}
     }
 }

@@ -17,7 +17,7 @@ public class BarrilSpawn : MonoBehaviour {
     {
         while (!stop)
         {
-            Vector3 position = new Vector3(10, 5, 0);
+            Vector3 position = new Vector3(12, 8, 0);
 
             GameObject barril = (GameObject)Instantiate(barrilPreFab, position, Quaternion.identity);
             

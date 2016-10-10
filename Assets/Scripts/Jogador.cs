@@ -57,7 +57,9 @@ public class Jogador : MonoBehaviour {
 		} else if (indoEsquerda) {
 			avatar.velocity = new Vector2 (-velocidade,0);
 		} else if(pulando) {
-			avatar.AddForce (transform.up * velocidade, ForceMode.Impulse);;
+			avatar.useGravity = true;
+
+			avatar.AddForce(jumpForce,ForceMode.Force);
 		}//End if
 		else {
 			avatar.velocity = new Vector2 (0, 0);
